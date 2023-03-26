@@ -15,12 +15,12 @@ while continue_game == "yes":
   guess = ""
   
   # Asking to guess the outcome
-  while guess != options[0] and guess != options[1]:
-    guess = input("Guess the outcome of a random coin flip: type 'heads' or 'tails' (without quotes):\n")
-    if guess != options[0] and guess != options[1]:
-      print("Your input is incorrect.")
-    else:
+  while guess not in options:
+    guess = input("Guess the outcome of a random coin flip: type 'heads' or 'tails'  (without quotes):\n")
+    if guess in options:
       break
+    else:
+      print("Your input is incorrect.")
   
   # Flipping the coin
   outcome = random.choice(options)
