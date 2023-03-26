@@ -16,7 +16,7 @@ while continue_game == "yes":
   
   # Asking to guess the outcome
   while guess not in options:
-    guess = input("Guess the outcome of a random coin flip: type 'heads' or 'tails'  (without quotes):\n")
+    guess = input("Guess the outcome of a random coin flip: type 'heads' or 'tails' (without quotes):\n")
     if guess in options:
       break
     else:
